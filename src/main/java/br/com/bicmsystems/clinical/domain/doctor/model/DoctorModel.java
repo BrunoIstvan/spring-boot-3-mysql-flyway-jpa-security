@@ -1,7 +1,9 @@
-package br.com.bicmsystems.clinical.domain.doctor;
+package br.com.bicmsystems.clinical.domain.doctor.model;
 
-import br.com.bicmsystems.clinical.domain.enums.Specialty;
-import br.com.bicmsystems.clinical.domain.location.LocationModel;
+import br.com.bicmsystems.clinical.domain.doctor.dto.InsertDoctorData;
+import br.com.bicmsystems.clinical.domain.doctor.dto.UpdateDoctorData;
+import br.com.bicmsystems.clinical.enums.Specialty;
+import br.com.bicmsystems.clinical.domain.location.model.LocationModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -45,7 +47,7 @@ public class DoctorModel {
         this.active = true;
     }
 
-    public void updateInfos(UpdateDoctorData dto) {
+    public void updateData(UpdateDoctorData dto) {
         if (dto.fullName() != null) {
             this.fullName = dto.fullName();
         }
@@ -53,7 +55,7 @@ public class DoctorModel {
             this.phone = dto.phone();
         }
         if (dto.location() != null) {
-            this.location.updateInfos(dto.location());
+            this.location.updateData(dto.location());
         }
     }
 

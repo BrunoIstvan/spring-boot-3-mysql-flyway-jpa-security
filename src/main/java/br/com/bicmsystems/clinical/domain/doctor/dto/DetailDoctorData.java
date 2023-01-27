@@ -1,7 +1,8 @@
-package br.com.bicmsystems.clinical.domain.doctor;
+package br.com.bicmsystems.clinical.domain.doctor.dto;
 
-import br.com.bicmsystems.clinical.domain.enums.Specialty;
-import br.com.bicmsystems.clinical.domain.location.LocationData;
+import br.com.bicmsystems.clinical.domain.doctor.model.DoctorModel;
+import br.com.bicmsystems.clinical.enums.Specialty;
+import br.com.bicmsystems.clinical.domain.location.dto.LocationData;
 
 public record DetailDoctorData(Long id, String fullName, String mail, String crm, String phone,
                                Specialty specialty, LocationData location) {

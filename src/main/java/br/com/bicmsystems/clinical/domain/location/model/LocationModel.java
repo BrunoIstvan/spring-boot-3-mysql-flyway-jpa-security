@@ -1,5 +1,6 @@
-package br.com.bicmsystems.clinical.domain.location;
+package br.com.bicmsystems.clinical.domain.location.model;
 
+import br.com.bicmsystems.clinical.domain.location.dto.LocationData;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -32,7 +33,7 @@ public class LocationModel {
         this.number = dto.number();
     }
 
-    public void updateInfos(LocationData dto) {
+    public void updateData(LocationData dto) {
         if(dto.address() != null) {
             this.address = dto.address();
         }

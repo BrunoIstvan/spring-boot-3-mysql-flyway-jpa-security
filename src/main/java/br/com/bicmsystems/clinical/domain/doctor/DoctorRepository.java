@@ -1,6 +1,7 @@
 package br.com.bicmsystems.clinical.domain.doctor;
 
 
+import br.com.bicmsystems.clinical.domain.doctor.model.DoctorModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

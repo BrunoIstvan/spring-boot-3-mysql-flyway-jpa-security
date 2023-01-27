@@ -1,6 +1,8 @@
-package br.com.bicmsystems.clinical.domain.patient;
+package br.com.bicmsystems.clinical.domain.patient.model;
 
-import br.com.bicmsystems.clinical.domain.location.LocationModel;
+import br.com.bicmsystems.clinical.domain.location.model.LocationModel;
+import br.com.bicmsystems.clinical.domain.patient.dto.InsertPatientData;
+import br.com.bicmsystems.clinical.domain.patient.dto.UpdatePatientData;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -40,9 +42,12 @@ public class PatientModel {
         this.active = true;
     }
 
-    public void updateInfos(UpdatePatientData dto) {
+    public void updateData(UpdatePatientData dto) {
         if(dto.fullName() != null)
             this.fullName = dto.fullName();
+
+        if(dto.mail() != null)
+            this.mail = dto.mail();
 
         if(dto.phone() != null)
             this.phone = dto.phone();

@@ -1,10 +1,10 @@
-package br.com.bicmsystems.clinical.domain.enums;
+package br.com.bicmsystems.clinical.enums;
 
 public enum Specialty {
 
     ORTOPEDIA,
     CARDIOLOGIA,
     GINECOLOGIA,
-    DERMATOLOGIA;
+    DERMATOLOGIA
 
 }

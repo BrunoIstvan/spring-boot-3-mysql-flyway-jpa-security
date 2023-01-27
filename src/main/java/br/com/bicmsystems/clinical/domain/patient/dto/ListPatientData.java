@@ -1,6 +1,7 @@
-package br.com.bicmsystems.clinical.domain.patient;
+package br.com.bicmsystems.clinical.domain.patient.dto;
 
-import br.com.bicmsystems.clinical.domain.location.LocationData;
+import br.com.bicmsystems.clinical.domain.location.dto.LocationData;
+import br.com.bicmsystems.clinical.domain.patient.model.PatientModel;
 
 public record ListPatientData(Long id, String fullName, String mail, String cpf, String phone,
                               LocationData location) {
