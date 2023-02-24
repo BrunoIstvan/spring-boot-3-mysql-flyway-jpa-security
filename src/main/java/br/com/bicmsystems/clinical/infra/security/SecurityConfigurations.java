@@ -33,6 +33,7 @@ public class SecurityConfigurations {
                 .and().authorizeHttpRequests()
                 .requestMatchers(toH2Console()).permitAll()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
                 // .requestMatchers(HttpMethod.DELETE, "/doctors").hasRole("ADMIN")
                 // .requestMatchers(HttpMethod.DELETE, "/patients").hasRole("ADMIN")
                 .anyRequest().authenticated()

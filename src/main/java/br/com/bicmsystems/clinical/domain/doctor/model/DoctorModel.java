@@ -1,7 +1,7 @@
 package br.com.bicmsystems.clinical.domain.doctor.model;
 
-import br.com.bicmsystems.clinical.domain.doctor.dto.InsertDoctorData;
-import br.com.bicmsystems.clinical.domain.doctor.dto.UpdateDoctorData;
+import br.com.bicmsystems.clinical.domain.doctor.dto.InsertDoctorRequest;
+import br.com.bicmsystems.clinical.domain.doctor.dto.UpdateDoctorRequest;
 import br.com.bicmsystems.clinical.enums.Specialty;
 import br.com.bicmsystems.clinical.domain.location.model.LocationModel;
 import jakarta.persistence.*;
@@ -37,7 +37,7 @@ public class DoctorModel {
 
     private Boolean active;
 
-    public DoctorModel(InsertDoctorData dto) {
+    public DoctorModel(InsertDoctorRequest dto) {
         this.fullName = dto.fullName();
         this.mail = dto.mail();
         this.crm = dto.crm();
@@ -47,7 +47,7 @@ public class DoctorModel {
         this.active = true;
     }
 
-    public void updateData(UpdateDoctorData dto) {
+    public void updateData(UpdateDoctorRequest dto) {
         if (dto.fullName() != null) {
             this.fullName = dto.fullName();
         }

@@ -15,6 +15,11 @@ public class ExceptionHandlers {
         return ResponseEntity.notFound().build();
     }
 
+    @ExceptionHandler(ValidationException.class)
+    public ResponseEntity handlerBusinessRules(ValidationException exception) {
+        return ResponseEntity.badRequest().body(exception.getMessage());
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity handler400(MethodArgumentNotValidException exception) {
         var errors = exception.getFieldErrors();

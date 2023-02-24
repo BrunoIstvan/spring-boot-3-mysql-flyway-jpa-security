@@ -1,8 +1,8 @@
 package br.com.bicmsystems.clinical.domain.patient.model;
 
 import br.com.bicmsystems.clinical.domain.location.model.LocationModel;
-import br.com.bicmsystems.clinical.domain.patient.dto.InsertPatientData;
-import br.com.bicmsystems.clinical.domain.patient.dto.UpdatePatientData;
+import br.com.bicmsystems.clinical.domain.patient.dto.InsertPatientRequest;
+import br.com.bicmsystems.clinical.domain.patient.dto.UpdatePatientRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Table(name = "patients")
-@Entity(name = "Patient")
+@Entity(name = "Patients")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,7 +33,7 @@ public class PatientModel {
 
     private Boolean active;
 
-    public PatientModel(InsertPatientData dto) {
+    public PatientModel(InsertPatientRequest dto) {
         this.fullName = dto.fullName();
         this.mail = dto.mail();
         this.cpf = dto.cpf();
@@ -42,7 +42,7 @@ public class PatientModel {
         this.active = true;
     }
 
-    public void updateData(UpdatePatientData dto) {
+    public void updateData(UpdatePatientRequest dto) {
         if(dto.fullName() != null)
             this.fullName = dto.fullName();
 

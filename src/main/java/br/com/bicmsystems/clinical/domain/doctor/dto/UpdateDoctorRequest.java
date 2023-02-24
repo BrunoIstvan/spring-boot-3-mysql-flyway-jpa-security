@@ -4,7 +4,7 @@ import br.com.bicmsystems.clinical.domain.location.dto.LocationData;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record UpdateDoctorData(
+public record UpdateDoctorRequest(
 
         @NotNull(message = "Id is mandatory")
         Long id,

@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record UpdatePatientData(
+public record UpdatePatientRequest(
 
         @NotNull(message = "Id is mandatory")
         Long id,

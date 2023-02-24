@@ -20,24 +20,22 @@
 	</properties>
 	<dependencies>
 
-		<!-- SECURITY
+		<!-- OPENAPI - SWAGGER -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		-->
+		<!-- OPENAPI - SWAGGER -->
+
+		<!-- Lib para criar API -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Lib para criar API -->
 
-
-		<!-- DATA -->
+		<!-- Banco de Dados -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -59,6 +57,7 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-mysql</artifactId>
 		</dependency>
+		<!-- Banco de Dados -->
 
 		<!-- LOMBOK -->
 		<dependency>
@@ -66,6 +65,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- LOMBOK -->
 
 		<!-- TESTES -->
 		<dependency>
@@ -73,6 +73,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- TESTES -->
 
 		<!-- DEVTOOLS -->
 		<dependency>
@@ -81,6 +82,7 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<!-- DEVTOOLS -->
 
 		<!-- SECURITY -->
 		<dependency>
@@ -99,7 +101,7 @@
 			<artifactId>java-jwt</artifactId>
 			<version>4.2.1</version>
 		</dependency>
-
+		<!-- SECURITY -->
 
 	</dependencies>
 

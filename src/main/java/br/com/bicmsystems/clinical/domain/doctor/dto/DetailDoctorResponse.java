@@ -4,10 +4,10 @@ import br.com.bicmsystems.clinical.domain.doctor.model.DoctorModel;
 import br.com.bicmsystems.clinical.enums.Specialty;
 import br.com.bicmsystems.clinical.domain.location.dto.LocationData;
 
-public record DetailDoctorData(Long id, String fullName, String mail, String crm, String phone,
-                               Specialty specialty, LocationData location) {
+public record DetailDoctorResponse(Long id, String fullName, String mail, String crm, String phone,
+                                   Specialty specialty, LocationData location) {
 
-    public DetailDoctorData(DoctorModel model) {
+    public DetailDoctorResponse(DoctorModel model) {
         this(model.getId(), model.getFullName(), model.getMail(), model.getCrm(), model.getPhone(),
                 model.getSpecialty(), new LocationData(model.getLocation()));
     }

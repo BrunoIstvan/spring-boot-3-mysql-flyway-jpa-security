@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record InsertPatientData(
+public record InsertPatientRequest(
 
         @NotBlank(message = "fullname field is required")
         String fullName,
