@@ -14,6 +14,8 @@ public interface DoctorRepository extends JpaRepository<DoctorModel, Long> {
 
     Page<DoctorModel> findAllByActiveTrue(Pageable page);
 
+    Page<DoctorModel> findAllByActiveTrueAndSpecialty(Pageable page, Specialty specialty);
+
     @Query("""
             select d from Doctor d where d.active = true and d.specialty = :specialty
             and d.id not in (select a.doctor.id from Appointments a where a.dateTime = :dateTime and a.reason is null)

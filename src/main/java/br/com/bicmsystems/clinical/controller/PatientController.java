@@ -1,6 +1,6 @@
 package br.com.bicmsystems.clinical.controller;
 
-import br.com.bicmsystems.clinical.domain.patient.*;
+import br.com.bicmsystems.clinical.domain.patient.PatientRepository;
 import br.com.bicmsystems.clinical.domain.patient.dto.DetailPatientResponse;
 import br.com.bicmsystems.clinical.domain.patient.dto.InsertPatientRequest;
 import br.com.bicmsystems.clinical.domain.patient.dto.ListPatientResponse;
@@ -14,7 +14,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -62,7 +61,7 @@ public class PatientController {
 
     @DeleteMapping("/{id}")
     @Transactional
-    @Secured("ROLE_ADMIN")
+    // @Secured("ROLE_ADMIN")
     public ResponseEntity delete(@PathVariable("id") Long id) {
         var model = repository.getReferenceById(id);
         model.delete();
